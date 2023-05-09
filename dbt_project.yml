@@ -33,7 +33,4 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   dbt_course_modularity:
-    mart/*:
-      materialized: table 
-    staging/*:
-      materialized: view
+    materialized: table 
