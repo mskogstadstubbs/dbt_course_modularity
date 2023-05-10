@@ -1,10 +1,6 @@
 {# in dbt Develop #}
 
-{% set old_etl_relation=adapter.get_relation(
-      database=target.database,
-      schema="dbt_modularity_course",
-      identifier="customer_orders"
-) -%}
+{% set old_etl_relation=ref('customer_orders') -%}
 
 {% set dbt_relation=ref('fct_customer_orders') %}
 
